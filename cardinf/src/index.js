@@ -10,7 +10,7 @@ import reducers from './reducers'
 
 import './app.css'
 import App from './components/app';
-import Car from './components/car';
+import Car from './containers/car';
 const createStorewithMiddleware = applyMiddleware(promiseMiddleware)(createStore) 
 
 ReactDOM.render(
@@ -18,7 +18,7 @@ ReactDOM.render(
     <BrowserRouter>
         <div>
             <Route exact path='/' component={App}></Route>
-            <Route path='/car/:id' component={Car}></Route>
+            <Route path='/cars/:id' component={Car}></Route>
         </div> 
     </BrowserRouter>
     </Provider >
