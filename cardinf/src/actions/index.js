@@ -9,7 +9,7 @@ export function getCars(keywords){
 
     return{
         type:'SEARCH_CARS',
-        payload:request
+        payload:request 
     }
 }
 
@@ -20,5 +20,12 @@ export function carDetail(id){
     return{
         type:'CAR_DETAIL',
         payload:request
+    }
+}
+
+export function clearDetail(){
+    return {
+        type:'CLEAR_DETAIL',
+        payload:[]
     }
 }

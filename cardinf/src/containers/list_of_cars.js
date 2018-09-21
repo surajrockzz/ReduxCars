@@ -4,9 +4,9 @@ import {Link} from 'react-router-dom'
 
 class ListOfCars extends Component{
 
-    listOfCars = ({cars})=>{
-            if(cars){
-                return cars.map((car)=>{
+    listOfCars = ({list})=>{
+            if(list){
+                return list.map((car)=>{
                     return(
                         <Link key={car.id} to={`/cars/${car.id}`} className="car_item">
                             <div className="left">
@@ -28,7 +28,7 @@ class ListOfCars extends Component{
 
     render(){
         return(
-            <div> {this.listOfCars(this.props)} </div>
+            <div> {this.listOfCars(this.props.cars )} </div>
         )
     }
 }
